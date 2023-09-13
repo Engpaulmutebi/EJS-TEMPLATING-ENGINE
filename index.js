@@ -6,7 +6,12 @@ app.set('views', 'views');
 
 app.get('/m', (req, res) => {
     // res.status(200).send('Welcome');
-    res.render('index');
+    res.render('index', {pageTitle: 'Home Page'});
+});
+
+app.get('/contact', (req, res) => {
+    // res.status(200).send('Welcome');
+    res.render('contact', {pageTitle: 'contact Page'});
 });
 
 app.listen(PORT,()=>{
